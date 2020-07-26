@@ -19,12 +19,11 @@ const handleFormSubmit = function(event) {
     const animalList = document.querySelector('#animal-list');
     const newItem = document.createElement('li');
     newItem.classList.add('animal-item');
-    newItem.textContent = `Animal: ${animal} | Species: ${species} | Continent: ${continent} | Conservation Status: ${conservationStatus}`;
+    newItem.textContent = `Animal: ${animal} | Species: ${species} | Continent: ${continent} | Conservation Status: ${conservationStatus}`
 
     animalList.appendChild(newItem);
 
     this.reset();
-
 };
 
 const handleFormDelete = function() {
