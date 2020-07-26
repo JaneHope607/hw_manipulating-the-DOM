@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded');
 
-    const submitForm = document.querySelector('#animal-list');
-    submitForm.addEventListener('submit', handleFormSubmit);
+    const form = document.querySelector('#new-form');
+    form.addEventListener('submit', handleFormSubmit);
 
     const deleteForm = document.querySelector('#delete-form');
     deleteForm.addEventListener('submit', handleFormDelete);
@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleFormSubmit = function(event) {
     event.preventDefault();
 
-    const animal = this.target.animal.value;
-    const species = this.target.species.value;
-    const continent = this.target.continent.value;
-    const conservationStatus = this.target.conservation-status.value;
+    const animal = event.target.animal.value;
+    const species = event.target.species.value;
+    const continent = event.target.continent.value;
+    const conservationStatus = event.target.conservation-status.value;
 
     const animalList = document.querySelector('#animal-list');
     const newItem = document.createElement('li');
@@ -23,7 +23,7 @@ const handleFormSubmit = function(event) {
 
     animalList.appendChild(newItem);
 
-    this.reset();
+    event.target.reset();
 };
 
 const handleFormDelete = function() {

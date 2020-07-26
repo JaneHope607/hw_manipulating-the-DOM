@@ -10,7 +10,7 @@
 
     <h1 id="heading">Endangered Animals</h1>
 
-    <form id="form">
+    <form id="new-form">
       <div id="form-wrapper">
         <div class="form-item">
           <label for="animal" class="primary">Animal</label>
@@ -37,27 +37,25 @@
           </div>
         </div>
         <input type="submit" value="save"/>
-      </form>
 
         <div class="form-item">
           <label for="conservation-status" class="primary">Conservation Status</label>
           <select id="conservation-status">
-            <option value="" disabled selected></option>
+            <option value=""disabled selected></option>
             <option value="Vulnerable">Vulnerable</option>
             <option value="Endangered">Endangered</option>
             <option value="Critically Endangered">Critically Endangered</option>
           </select>
         </div>
       </div>
-      <input type="submit" value="save"/>
+
+      <div id="form-buttons">
+          <button type="submit" value="save-animal" id="save-animal">Save Animal</button>
+          <button type="button" value="delete-all" id="delete-all">Delete All</button>
     </form>
 
     <h1>List Of Endangered Animals:</h1>
     <ul id="animal-list"></ul>
-
-    <form id="delete-form">
-        <input type="submit" id="delete" value="Delete All"/>
-    </form>
 
   </body>
 </html>
