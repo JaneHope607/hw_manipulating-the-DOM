@@ -10,7 +10,7 @@ body {
 
 #form-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .form-item {
@@ -24,14 +24,30 @@ body {
 }
 
 .animal-item {
-    border: 1em solid grey;
+    border: .2em solid grey;
     list-style: none;
-}
+    padding: 1em;
+} 
 
 li {
     background-color: white;
 }
 
-/* button { */
+button {
+    background-color: slategray;
+    color: white;
+    cursor: pointer;
+    padding: .7em;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-right: 4em;
+    margin-left: 1.2em;
+    text-align: center;
+}
 
-/* } */
+h1 {
+    font-weight: bold;
+    margin-left: .5em;
+    text-decoration: underline;
+    color: rgb(43, 42, 42);
+}
