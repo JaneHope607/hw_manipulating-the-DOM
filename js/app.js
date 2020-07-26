@@ -11,24 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleFormSubmit = function (event) {
     event.preventDefault();
 
-    const animal = document.createElement('li');
-    animal.textContent = `${event.target.animal.value}`;
-    animal.classList.add('animal-item');
+    const animal = event.target.animal.value;
+    const species = event.target.species.value;
+    const continent = event.target.continent.value;
+    const conservationStatus = event.target.conservation-status.value;
 
-    const species = document.createElement('li');
-    species.textContent = `${event.target.species.value}`;
-    species.classList.add('species-item');
-
-    const continent = document.createElement('li');
-    continent.textContent = `${event.target.continent.value}`;
-    continent.classList.add('continent-item');
-
-    const conservationStatus = document.createElement('li');
-    conservationStatus.textContent = `${event.target.conservation-status.value}`;
-    conservationStatus.classList.add('conservationStatus-item');
-
-
-};
+    const newItem = document.createElement('li');
+    newItem.textContent = `Animal: ${animal}, Species: ${species}, Continent: ${continent}, Conservation Status: ${conservationStatus}`;
+    newItem.classList
 
 
 const handleFormDelete = function (event) {
