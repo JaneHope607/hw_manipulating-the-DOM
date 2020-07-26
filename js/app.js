@@ -8,20 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteForm.addEventListener('submit', handleFormDelete);
 });
 
-const handleFormSubmit = function (event) {
+const handleFormSubmit = function(event) {
     event.preventDefault();
 
-    const animal = event.target.animal.value;
-    const species = event.target.species.value;
-    const continent = event.target.continent.value;
-    const conservationStatus = event.target.conservation-status.value;
+    const animal = this.target.animal.value;
+    const species = this.target.species.value;
+    const continent = this.target.continent.value;
+    const conservationStatus = this.target.conservation-status.value;
 
+    const animalList = document.querySelector('#animal-list');
     const newItem = document.createElement('li');
-    newItem.textContent = `Animal: ${animal}, Species: ${species}, Continent: ${continent}, Conservation Status: ${conservationStatus}`;
-    newItem.classList
+    newItem.classList.add('animal-item');
+    newItem.textContent = `Animal: ${animal} | Species: ${species} | Continent: ${continent} | Conservation Status: ${conservationStatus}`;
 
+    animalList.appendChild(newItem);
 
-const handleFormDelete = function (event) {
+    this.reset();
 
+};
 
+const handleFormDelete = function() {
+    const deletedList = document.querySelector('#animal-list');
+    deletedList.textContent = '';
 };
