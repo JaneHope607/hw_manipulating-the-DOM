@@ -1,0 +1,37 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background: var(--color-darkblue);
+    background-image: url('./backround.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+
+#form-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-item {
+    padding: 1em;
+    margin-right: 1em;
+}
+
+#animal-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.animal-item {
+    border: 1em solid grey;
+    list-style: none;
+}
+
+li {
+    background-color: white;
+}
+
+/* button { */
+
+/* } */
